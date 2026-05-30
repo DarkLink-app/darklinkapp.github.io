@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-label="DarkLink">
+  <defs>
+    <linearGradient id="dl-mark" x1="18" y1="18" x2="112" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.52" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="dl-word" x1="180" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E6E8EC"/>
+      <stop offset="0.58" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="120" rx="22" fill="#0B0D10"/>
+  <g fill="none" stroke="url(#dl-mark)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 24h34c25 0 40 16 40 41v21"/>
+    <path d="M45 42h17c14 0 21 8 21 23v37"/>
+    <path d="M27 24v72c0 5 4 9 9 9h47"/>
+    <path d="M101 86v11c0 5 4 8 9 8h18"/>
+  </g>
+  <circle cx="118" cy="24" r="6" fill="#8B5CF6"/>
+  <circle cx="34" cy="93" r="3.5" fill="#22D3EE"/>
+  <circle cx="130" cy="105" r="5" fill="#8B5CF6"/>
+  <text x="166" y="62" fill="url(#dl-word)" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">DarkLink</text>
+  <text x="168" y="88" fill="#A4A7B1" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500">Messagerie priv&#233;e. Acc&#232;s sur invitation.</text>
+</svg>
