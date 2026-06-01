@@ -77,17 +77,16 @@ nav a:focus-visible {
   color: var(--text);
 }
 
-.lang-link {
+.domain-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 36px;
   min-height: 30px;
   padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--text);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 800;
 }
 
