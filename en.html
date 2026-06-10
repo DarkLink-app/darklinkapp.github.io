@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="DarkLink is an invitation-only private messenger for direct, calm and intentional exchanges."
+      content="DarkLink is an end-to-end encrypted, self-hosted messenger transported exclusively over Tor."
     />
     <meta name="theme-color" content="#07090b" />
     <meta property="og:title" content="DarkLink" />
     <meta
       property="og:description"
-      content="An invitation-only private messenger designed for trusted circles."
+      content="E2EE self-hosted messaging over Tor. You control your server, your keys, your contacts."
     />
     <meta property="og:image" content="https://darklinkapp.com/assets/hero-abstract.png" />
     <meta property="og:type" content="website" />
@@ -30,7 +30,8 @@
         <img src="assets/logo.svg" alt="DarkLink" />
       </span>
       <nav>
-        <a class="domain-link" href="https://darklinkapp.com/">darklinkapp.com</a>
+        <a href="/">Français</a>
+        <a class="domain-link" href="https://github.com/DarkLink-app/darklink-server" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </header>
 
@@ -39,67 +40,100 @@
         <img class="hero-image" src="assets/hero-abstract.png" alt="" aria-hidden="true" />
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">Private messaging by invitation</p>
+          <p class="eyebrow">E2EE Messenger &mdash; Self-hosted &mdash; Tor only</p>
           <h1 id="hero-title">DarkLink</h1>
           <p class="lead">
-            A discreet place to speak with the right people, away from public
-            noise, open profiles and conversations that scatter everywhere.
+            Your messages never pass through our servers. They are encrypted on your device,
+            transported over Tor, and decrypted only on the recipient&rsquo;s device.
+            You host your own server.
           </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/DarkLink-app/darklink-server" target="_blank" rel="noopener">Host your server</a>
+            <a class="button secondary" href="#how-it-works">How it works</a>
+          </div>
         </div>
       </section>
 
-      <section id="approach" class="section">
+      <section id="how-it-works" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Approach</p>
-          <h2>A calmer presence.</h2>
+          <p class="eyebrow">How it works</p>
+          <h2>Zero server-side trust.</h2>
           <p>
-            DarkLink focuses on what matters: a chosen conversation, a clear
-            interface and an experience intentionally closed to the noise.
+            DarkLink is designed so that a compromised server reveals nothing. Encryption
+            is handled entirely client-side &mdash; the server only sees opaque envelopes,
+            never the content.
           </p>
         </div>
         <div class="feature-grid">
           <article>
             <span class="feature-mark"></span>
-            <h3>Chosen access</h3>
+            <h3>End-to-end encryption</h3>
             <p>
-              The experience is designed for smaller circles, with progressive
-              entry and approved contacts.
+              Every message is encrypted with P256&nbsp;ECDH&nbsp;+&nbsp;AES&#8209;256&#8209;GCM,
+              per device. The server stores only ciphertext and deletes it after delivery.
             </p>
           </article>
           <article>
             <span class="feature-mark"></span>
-            <h3>Direct conversation</h3>
+            <h3>Tor-only transport</h3>
             <p>
-              No public feed, no social performance. DarkLink keeps the exchange
-              at the center and moves the rest out of the way.
+              Every DarkLink server is a .onion address. No open ports on the Internet,
+              no visible IP, no DNS. Access is exclusively through the Tor network.
             </p>
           </article>
           <article>
             <span class="feature-mark"></span>
-            <h3>Quiet design</h3>
+            <h3>Renewable identities</h3>
             <p>
-              The brand stays restrained and intentionally understated, with just
-              enough signal to understand the product&rsquo;s intent.
+              Every user has a public identity that can be rotated independently of their account.
+              Rotation updates existing contacts without interrupting conversations.
+            </p>
+          </article>
+          <article>
+            <span class="feature-mark"></span>
+            <h3>Inter-server federation</h3>
+            <p>
+              Two DarkLink servers can be federated: users add each other via QR code
+              and message directly, server to server, over Tor.
+            </p>
+          </article>
+          <article>
+            <span class="feature-mark"></span>
+            <h3>Simple self-hosting</h3>
+            <p>
+              A single script installs Docker, configures Tor, generates the .onion addresses
+              and starts the server. No ports to open. Runs on any Linux machine.
+            </p>
+          </article>
+          <article>
+            <span class="feature-mark"></span>
+            <h3>Automatic .onion rotation</h3>
+            <p>
+              Admins can rotate .onion addresses manually or automatically on a schedule.
+              Tor restarts on its own and federated contacts are notified automatically.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="access" class="access-band">
+      <section id="self-host" class="access-band">
         <div>
-          <p class="eyebrow">Access</p>
-          <h2>Progressive opening</h2>
+          <p class="eyebrow">Open source</p>
+          <h2>Host your own</h2>
           <p>
-            DarkLink is in preparation. Early access will be distributed directly,
-            in small numbers, to invited people.
+            DarkLink is fully open source. The source code, install script and documentation
+            are available on GitHub. A working server up in minutes on any Linux with Docker.
           </p>
         </div>
+        <a class="button primary" href="https://github.com/DarkLink-app/darklink-server" target="_blank" rel="noopener">
+          View on GitHub
+        </a>
       </section>
     </main>
 
     <footer>
       <span>DarkLink</span>
-      <span>Private messaging for trusted circles.</span>
+      <span>E2EE self-hosted messaging over Tor.</span>
     </footer>
   </body>
 </html>

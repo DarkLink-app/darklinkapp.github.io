@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="DarkLink est une messagerie priv&eacute;e sur invitation pour des &eacute;changes directs, calmes et choisis."
+      content="DarkLink est une messagerie chiffr&eacute;e de bout en bout, auto-h&eacute;berg&eacute;e, transport&eacute;e exclusivement sur Tor."
     />
     <meta name="theme-color" content="#07090b" />
     <meta property="og:title" content="DarkLink" />
     <meta
       property="og:description"
-      content="Une messagerie priv&eacute;e sur invitation, con&ccedil;ue pour les cercles de confiance."
+      content="Messagerie E2EE auto-h&eacute;berg&eacute;e sur Tor. Vous contr&ocirc;lez votre serveur, vos cl&eacute;s, vos contacts."
     />
     <meta property="og:image" content="https://darklinkapp.com/assets/hero-abstract.png" />
     <meta property="og:type" content="website" />
@@ -30,7 +30,8 @@
         <img src="assets/logo.svg" alt="DarkLink" />
       </span>
       <nav>
-        <a class="domain-link" href="https://darklinkapp.com/">darklinkapp.com</a>
+        <a href="en.html">English</a>
+        <a class="domain-link" href="https://github.com/DarkLink-app/darklink-server" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </header>
 
@@ -39,67 +40,102 @@
         <img class="hero-image" src="assets/hero-abstract.png" alt="" aria-hidden="true" />
         <div class="hero-scrim" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">Messagerie priv&eacute;e sur invitation</p>
+          <p class="eyebrow">Messagerie E2EE &mdash; Auto-h&eacute;berg&eacute;e &mdash; Tor uniquement</p>
           <h1 id="hero-title">DarkLink</h1>
           <p class="lead">
-            Un espace discret pour parler avec les bonnes personnes, loin du bruit
-            public, des profils ouverts et des conversations qui s&rsquo;&eacute;parpillent.
+            Vos messages ne transitent pas par nos serveurs. Ils sont chiffr&eacute;s sur votre appareil,
+            transport&eacute;s sur Tor, et d&eacute;chiffr&eacute;s uniquement sur l&rsquo;appareil du destinataire.
+            Vous h&eacute;bergez votre propre serveur.
           </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/DarkLink-app/darklink-server" target="_blank" rel="noopener">H&eacute;berger votre serveur</a>
+            <a class="button secondary" href="#fonctionnement">Comment &ccedil;a fonctionne</a>
+          </div>
         </div>
       </section>
 
-      <section id="approche" class="section">
+      <section id="fonctionnement" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Approche</p>
-          <h2>Une pr&eacute;sence plus calme.</h2>
+          <p class="eyebrow">Fonctionnement</p>
+          <h2>Z&eacute;ro confiance c&ocirc;t&eacute; serveur.</h2>
           <p>
-            DarkLink se concentre sur ce qui compte: une conversation choisie, une
-            interface claire et une exp&eacute;rience volontairement ferm&eacute;e au bruit.
+            DarkLink est con&ccedil;u pour qu&rsquo;un serveur compromis ne r&eacute;v&egrave;le rien. Le chiffrement
+            est g&eacute;r&eacute; enti&egrave;rement c&ocirc;t&eacute; client &mdash; le serveur ne voit que des enveloppes
+            opaques, jamais le contenu.
           </p>
         </div>
         <div class="feature-grid">
           <article>
             <span class="feature-mark"></span>
-            <h3>Acc&egrave;s choisi</h3>
+            <h3>Chiffrement de bout en bout</h3>
             <p>
-              L&rsquo;exp&eacute;rience est pens&eacute;e pour des cercles restreints, avec une
-              entr&eacute;e progressive et des contacts approuv&eacute;s.
+              Chaque message est chiffr&eacute; avec P256&nbsp;ECDH&nbsp;+&nbsp;AES&#8209;256&#8209;GCM,
+              par appareil. Le serveur ne stocke que des donn&eacute;es chiffr&eacute;es et les supprime apr&egrave;s livraison.
             </p>
           </article>
           <article>
             <span class="feature-mark"></span>
-            <h3>Conversation directe</h3>
+            <h3>Transport Tor exclusif</h3>
             <p>
-              Pas de fil public, pas de mise en sc&egrave;ne sociale. DarkLink garde
-              l&rsquo;&eacute;change au centre et retire le reste du chemin.
+              Chaque serveur DarkLink est une adresse&nbsp;.onion. Pas de port ouvert sur Internet,
+              pas d&rsquo;IP visible, pas de DNS. L&rsquo;acc&egrave;s passe uniquement par le r&eacute;seau Tor.
             </p>
           </article>
           <article>
             <span class="feature-mark"></span>
-            <h3>Design discret</h3>
+            <h3>Identit&eacute;s renouvelables</h3>
             <p>
-              La marque reste sobre, volontairement peu bavarde, avec juste assez
-              de rep&egrave;res pour comprendre l&rsquo;intention du produit.
+              Chaque utilisateur poss&egrave;de une identit&eacute; publique renouvelable ind&eacute;pendamment de son compte.
+              La rotation met &agrave; jour les contacts existants sans interrompre les &eacute;changes.
+            </p>
+          </article>
+          <article>
+            <span class="feature-mark"></span>
+            <h3>F&eacute;d&eacute;ration inter-serveurs</h3>
+            <p>
+              Deux serveurs DarkLink peuvent &ecirc;tre f&eacute;d&eacute;r&eacute;s : les utilisateurs s&rsquo;ajoutent
+              en contact via QR code et &eacute;changent directement, de serveur &agrave; serveur, sur Tor.
+            </p>
+          </article>
+          <article>
+            <span class="feature-mark"></span>
+            <h3>Auto-h&eacute;bergement simple</h3>
+            <p>
+              Un seul script installe Docker, configure Tor, g&eacute;n&egrave;re les adresses&nbsp;.onion
+              et d&eacute;marre le serveur. Aucun port &agrave; ouvrir. Tourne sur n&rsquo;importe quel Linux.
+            </p>
+          </article>
+          <article>
+            <span class="feature-mark"></span>
+            <h3>Rotation .onion automatique</h3>
+            <p>
+              L&rsquo;administrateur peut faire pivoter les adresses&nbsp;.onion manuellement
+              ou de fa&ccedil;on automatique. Le serveur Tor red&eacute;marre seul et les contacts
+              f&eacute;d&eacute;r&eacute;s sont notifi&eacute;s automatiquement.
             </p>
           </article>
         </div>
       </section>
 
-      <section id="acces" class="access-band">
+      <section id="heberger" class="access-band">
         <div>
-          <p class="eyebrow">Acc&egrave;s</p>
-          <h2>Ouverture progressive</h2>
+          <p class="eyebrow">Open source</p>
+          <h2>H&eacute;bergez le v&ocirc;tre</h2>
           <p>
-            DarkLink est en pr&eacute;paration. Les premiers acc&egrave;s seront distribu&eacute;s
-            directement, en petit nombre, aux personnes invit&eacute;es.
+            DarkLink est enti&egrave;rement open source. Le code source, le script d&rsquo;installation
+            et la documentation sont disponibles sur GitHub.
+            Un serveur op&eacute;rationnel en quelques minutes sur n&rsquo;importe quel Linux avec Docker.
           </p>
         </div>
+        <a class="button primary" href="https://github.com/DarkLink-app/darklink-server" target="_blank" rel="noopener">
+          Voir sur GitHub
+        </a>
       </section>
     </main>
 
     <footer>
       <span>DarkLink</span>
-      <span>Messagerie priv&eacute;e pour cercles de confiance.</span>
+      <span>Messagerie E2EE auto-h&eacute;berg&eacute;e sur Tor.</span>
     </footer>
   </body>
 </html>
